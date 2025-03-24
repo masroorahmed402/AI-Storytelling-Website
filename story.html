@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Storytelling</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>AI-Enhanced Storytelling</h1>
+    </header>
+
+    <section id="story">
+        <h2 id="chapter-title">Chapter 1</h2>
+        <p id="story-text">Loading AI-generated story...</p>
+        <button id="btnn" onclick="toggleLore()">🔎 Reveal Hidden Lore</button>
+        <p id="lore-text" style="display: none;"></p>
+        <img id="story-image" src="" alt="Story Scene">
+        <audio id="story-voice" controls></audio> 
+        <audio id="story-audio" autoplay loop></audio>
+        <button id="toggle-ambient" onclick="toggleAmbient()">🔈 Mute Ambient</button>
+    </section>
+    <div id="controls">
+        <button onclick="prevChapter()">⬅️ Previous</button>
+        <button onclick="nextChapter()">Next ➡️</button>
+    </div>
+    <div id="progress-info">
+        <p id="chapter-indicator">Chapter 1 of 3</p>
+        <progress id="chapter-progress" value="1" max="3"></progress>
+    </div>
+    <div id="chapter-selector">
+        <label for="chapter-select">📘 Jump to Chapter:</label>
+        <select id="chapter-select" onchange="jumpToChapter(this.value)">
+            <option value="1">Chapter 1: The Awakening</option>
+            <option value="2">Chapter 2: The Hidden City</option>
+            <option value="3">Chapter 3: The Final Revelation</option>
+        </select>
+    </div>
+    <div id="timeline">
+        <div class="chapter-point active">Chapter 1</div>
+        <div class="chapter-point">Chapter 2</div>
+        <div class="chapter-point">Chapter 3</div>
+    </div>    
+    <footer>
+        <p>Story and assets generated using ChatGPT, DALL·E, and Murf AI. Site by Mohammed Masroor.</p>
+    </footer>    
+    <script src="script.js"></script>
+</body>
+</html>
